@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- The below line makes the web page compatible with different sized screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>     <!--The title is stated for google clone in the tab-->
+    <!-- An inbuilt css is used instead of an external one to avoid tedious work -->
+    <!-- And Used inside the head since its the syntax of an inbuilt css in an html page -->
+    <style>
+        /* The .button is used to change the following values of the button such as border, size, font, etc */
+        .button{              
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        /* .button2 is used for adjusting the values of attributes of other buttons in the google clone */
+        .button2{
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* The underline is removed in the achor tag and enabled only when the cursor is pointed towards it */
+        a:link{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active{
+            text-decoration: underline;
+            color: black;
+        }
+
+        a {
+            padding: 1px;
+            margin: 5px;
+        }
+
+        /* attributes of input values are changed to fit the border standards and thickness and color of google */
+        input[type=text] {
+            width: 50%;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 45px;
+            font-size: 16px;
+            background-color: white;
+            /* All though I was unable to edit the google voice icon inside the form input due to consistent errors */
+            background-image: url('voice.jpg') repeat 0 0;           
+            background-position: 50x 50px;
+            /* background-repeat: no-repeat; */
+            padding:12px 20px 12px 40px;
+        }
+
+        /* Specifically anchor tags with names were used because of different styles of hyperlinking in the google homepage */
+        a[name=anchor]{
+            text-decoration: none;
+            color:indigo;
+        }
+
+        a[name=anchor2]{
+            text-decoration: none;
+            color:gray;
+        }
+/* The footer is an intresting and essential part of the frontend. Although, I was unable to adjust the color schema of the original google 
+due to google making their own footer with creating multiple divs and logic to create a new color schema */
+        .footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            width: 100%;
+            font-size: 18px;
+            background-color: lightgray;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- The body part starts from here, While I have used php here just to make sure the layout of the original google homepage
+    meets the one with the clone -->
+    <php>
+    <!-- DIV is used which was very handy to adjust the text or form or anything just the way the homepage originally had -->
+    <div align="right" >
+        
+        <a href = "https://accounts.google.com/signin/v2/identifier?hl=en&continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D1&ec=GAlAmgQ&flowName=GlifWebSignIn&flowEntry=AddSession">Gmail</a>
+    
+        <a href = "https://www.google.co.in/imghp?hl=en&tab=ri&authuser=0&ogbl">Images</a>
+        <!-- A button is created using standard button syntax and due to restrictions and the need of involvement of interaction inside the button,
+        The button doesnt support hyperlinking. So, instead an onclick pre existing method is used to avoid the usage of execessive javascript inside the program
+        along with a window.location.href which helps to locate the url pointing towards the hyperlink. -->
+        <button class="button2" onclick="window.location.href='https://accounts.google.com/signin/v2/identifier?hl=en&continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D1&ec=GAlAmgQ&flowName=GlifWebSignIn&flowEntry=AddSession';">Sign in</button>
+
+    </div>
+    <!-- The br tag was used just to maintain gap and the origianlity of the homepage -->
+
+    <br>
+    <!-- A standard img tag along with height and width attributes is used just to avoid excessive css -->
+    <div align="center" >
+        <img src="google.jpg" width="350" height="200">
+    </div>
+    <!-- A form type is launched which helps us create a non parameter passing text field form label which is updated with css -->
+    <div align="center">
+        <form>
+            <!-- The input type="text" here indicates that the form can take text parameters  -->
+            <input type="text">
+        </form>
+    </div>
+    
+    <!-- Two extra buttons are used which were indicated below the search bar and seperate css is written to show
+    the difference between the signin and the google search button -->
+    <div align="center">
+        <button class="button" onclick="">Yuup! Its fake ^_^</button>
+        <button class="button" onclick="window.location.href='https://www.google.com/doodles';">I'm Feeling Lucky</button>
+    </div>
+    
+    <!-- Hyperlinking using anchor tags is achieved here with all the languages google provides linking it with the original webpage with the desired language -->
+    <div align="center">
+        <p>Google offered in: <a name="anchor" href="https://www.google.com/setprefs?sig=0_dvbg-qr-nkyT5_wZ0Pni4AwTp-U%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwj6kum814f5AhWIOnAKHSrFCEMQ2ZgBCBA">हिन्दी</a> <a name="anchor" href="https://www.google.com/setprefs?sig=0_dvbg-qr-nkyT5_wZ0Pni4AwTp-U%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwj6kum814f5AhWIOnAKHSrFCEMQ2ZgBCBE">বাংলা</a> <a name="anchor" href="https://www.google.com/setprefs?sig=0_dvbg-qr-nkyT5_wZ0Pni4AwTp-U%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwj6kum814f5AhWIOnAKHSrFCEMQ2ZgBCBI">తెలుగు</a> <a name="anchor" href="https://www.google.com/setprefs?sig=0_dvbg-qr-nkyT5_wZ0Pni4AwTp-U%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwj6kum814f5AhWIOnAKHSrFCEMQ2ZgBCBM">मराठी</a> <a name="anchor" href="https://www.google.com/setprefs?sig=0_dvbg-qr-nkyT5_wZ0Pni4AwTp-U%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwj6kum814f5AhWIOnAKHSrFCEMQ2ZgBCBQ">தமிழ்</a> <a name="anchor" href="https://www.google.com/setprefs?sig=0_dvbg-qr-nkyT5_wZ0Pni4AwTp-U%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwj6kum814f5AhWIOnAKHSrFCEMQ2ZgBCBc">മലയാളം</a> <a name="anchor" href="https://www.google.com/setprefs?sig=0_dvbg-qr-nkyT5_wZ0Pni4AwTp-U%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwj6kum814f5AhWIOnAKHSrFCEMQ2ZgBCBg">ਪੰਜਾਬੀ</a></p>
+    </div>
+    
+    <!-- A footer is introduced using a class in div which was determined in the css and given a dark background color to match the google homepage patterns  -->
+    <div class="footer">
+        <div>
+            <!-- A pargraph tag is used just to indicate india along with the perfect spacing it needs -->
+            <p>
+                 India
+            </p>
+            <!-- An hr tag is used just for horizontal rule with a gray color to dull the effects -->
+            <hr style="color:gray"> 
+            <!-- Anchor tags are used to hyperlink the footer tags in a linear fashion with a named attribute of anchor2 to have a different font and color -->
+            <a name="anchor2" href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1">  About</a>
+            <a name="anchor2" href="https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">  Advertising</a>
+            <a name="anchor2" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">  Business</a>
+            <a name="anchor2" href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a>
+            <div align="right">
+                <!-- A different div was used to align the other two tags and one text to the right side -->
+                <a name="anchor2" href="https://policies.google.com/privacy?hl=en-IN&fg=1">Privacy</a>
+                <a name="anchor2" href="https://policies.google.com/terms?hl=en-IN&fg=1">Terms</a>
+                Settings
+            </div>
+        </div>
+        
+    </div>
+    <!-- The php is closed since the code is completed along with the body and the html -->
+    </php>
+    
+
+</body>
+</html>
